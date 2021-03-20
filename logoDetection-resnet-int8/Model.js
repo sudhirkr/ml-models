@@ -1,6 +1,5 @@
-export default class LogoDetection {
+export default class logoDetection-resnet-int8 {
     constructor() {
-        // this.label = ["Axis Bank", "Bank of Baroda","HDFC Bank","State Bank of India","Kotak Bank","ICICI Bank","Bandhan Bank","Federal Bank", "IndusInd Bank", "Punjab National Bank","RBL Bank","Facebook","Amazon","Paypal","Google","Dropbox","Bank of India","Bank of Maharashtra","Canara Bank","Central Bank of India","Indian Bank","Indian Overseas Bank","Punjab and Sind Bank","Union Bank of India","UCO Bank","Yes Bank"];
         this.label = [
             "Axis Bank",
             "Bank of Baroda",
