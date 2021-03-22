@@ -1,4 +1,4 @@
-export default class logoDetection-resnet-int8 {
+export default class logoDetection_resnet_int8 {
     constructor() {
         this.label = [
             "Axis Bank",
@@ -317,6 +317,6 @@ export default class logoDetection-resnet-int8 {
     }
 
 }
-logoDetection-resnet-int8.dependencies = [
+logoDetection_resnet_int8.dependencies = [
     "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js",
 ]
