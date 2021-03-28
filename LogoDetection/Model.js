@@ -92,11 +92,9 @@ export default class LogoDetection {
     }
 
     async predict(url) {
-
-
         this.model = await tf.loadGraphModel(this.graph_model_url)
-
         console.log('I am inside tfJS');
+        console.log("model desc", this.model);
         let image = await this.loadImage(url);
 
         let t0 = performance.now();
