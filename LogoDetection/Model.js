@@ -111,13 +111,7 @@ export default class LogoDetection {
             let backend = 'webgl';
             await tf.setBackend(backend);
             console.log('tf backend ' + backend + ' configured');
-        } catch (error) {
-            console.log(error)
-            console.log("Inside expandDims crash")
-        }
-        
-        let t01 = performance.now();
-        try {
+            let t01 = performance.now();
             let outputs = await this.model.executeAsync({
                 'image_tensor': tf_img
             }, ['detection_boxes', 'detection_scores', 'detection_classes']);
