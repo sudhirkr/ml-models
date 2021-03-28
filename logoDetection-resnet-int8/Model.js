@@ -134,7 +134,7 @@ export default class logoDetection_resnet_int8 {
         let t01 = performance.now();
         try {
             let outputs = await this.model.executeAsync({
-                'image_tensor': tf_img
+                'input_tensor': tf_img
             }, ['detection_boxes', 'detection_scores', 'detection_classes']);
 
             let t11 = performance.now();
