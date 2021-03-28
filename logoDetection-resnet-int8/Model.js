@@ -109,11 +109,10 @@ export default class logoDetection_resnet_int8 {
     }
 
     async predict(url) {
-
-
+        console.log('Loading model');
         this.model = await tf.loadGraphModel(this.graph_model_url)
-
-        console.log('I am inside tfJS');
+        
+        console.log('Model loaded');
         let image = await this.loadImage(url);
 
         let t0 = performance.now();
@@ -166,6 +165,7 @@ export default class logoDetection_resnet_int8 {
                 };
             }
         } catch (error) {
+            console.log(error)
             let t11 = performance.now();
             console.log("Prediction took " + (t11 - t01) + " milliseconds.");
             return {
