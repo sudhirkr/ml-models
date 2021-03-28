@@ -318,5 +318,5 @@ export default class logoDetection_resnet_int8 {
 
 }
 logoDetection_resnet_int8.dependencies = [
-    "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js",
+    "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.8.2/dist/tf.min.js",
 ]
