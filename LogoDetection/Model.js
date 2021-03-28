@@ -103,17 +103,21 @@ export default class LogoDetection {
 
         let tf_image = await tf.browser.fromPixels(image);
         console.log("tf_image", tf.print(tf_image));
+        try { 
+            let tf_img = await tf_image.expandDims(0);
+            console.log("tf_image shape: ", tf_img.shape);
 
-        let tf_img = await tf_image.expandDims(0);
-        console.log("tf_image shape: ", tf_img.shape);
+            let t1 = performance.now();
+            console.log("Image to tensor took " + (t1 - t0) + " milliseconds.");
 
-        let t1 = performance.now();
-        console.log("Image to tensor took " + (t1 - t0) + " milliseconds.");
-
-        let backend = 'webgl';
-        await tf.setBackend(backend);
-        console.log('tf backend ' + backend + ' configured');
-
+            let backend = 'webgl';
+            await tf.setBackend(backend);
+            console.log('tf backend ' + backend + ' configured');
+        } catch (error) {
+            console.log(error)
+            console.log("Inside expandDims crash")
+        }
+        
         let t01 = performance.now();
         try {
             let outputs = await this.model.executeAsync({
@@ -149,6 +153,7 @@ export default class LogoDetection {
                 };
             }
         } catch (error) {
+            console.log(error)
             let t11 = performance.now();
             console.log("Prediction took " + (t11 - t01) + " milliseconds.");
             return {
