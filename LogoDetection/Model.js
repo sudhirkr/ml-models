@@ -304,5 +304,5 @@ export default class LogoDetection {
 
 }
 LogoDetection.dependencies = [
-    "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js",
+    "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js",
 ]
