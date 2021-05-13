@@ -1,4 +1,4 @@
-export default class mobilenetv2_vishal {
+export default class mobilenetv2Classification {
     constructor() {    
 	/*this.label = [
 		'Amazon',
@@ -374,8 +374,8 @@ export default class mobilenetv2_vishal {
     }
 
 }
-mobilenetv2_vishal.dependencies = [
+mobilenetv2Classification.dependencies = [
     "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.6.0/dist/tf.min.js",
 ]
-mobilenetv2_vishal.model = ROOT_DIR + "/mobilenetv2_vishal/model/model.json"
+mobilenetv2Classification.model = ROOT_DIR + "/mobilenetv2Classification/model/model.json"
 
