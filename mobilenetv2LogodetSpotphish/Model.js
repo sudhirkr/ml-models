@@ -115,7 +115,7 @@ export default class mobilenetv2LogodetSpotphish {
 
     async predict(url, graph_model_url) {
 	// tensorflow execution scope
-	tf.engine().startScope()
+        tf.engine().startScope()
         console.log(url);
 	this.model = await tf.loadGraphModel(graph_model_url)
 
@@ -154,12 +154,6 @@ export default class mobilenetv2LogodetSpotphish {
             this.count = this.count + 1;
 
             console.log(pred_result);
-	    tf_image.dispose()
-            tf_img.dispose()
-            this.model.dispose()
-            console.log("hello", tf.memory().numTensors)
-
-
             if (pred_result != null) {
                 return {
                     site: pred_result.site,
