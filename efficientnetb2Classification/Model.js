@@ -1,6 +1,6 @@
 
 
-export default class efficientnetb2_shubham {
+export default class efficientnetb2Classification {
     constructor() {    
 	/*this.label = [
 		'Amazon',
@@ -377,8 +377,8 @@ export default class efficientnetb2_shubham {
     }
 
 }
-efficientnetb2_shubham.dependencies = [
+efficientnetb2Classification.dependencies = [
     "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.6.0/dist/tf.min.js",
 ]
-efficientnetb2_shubham.model = ROOT_DIR + "/efficientnetb2_shubham/model/model.json"
+efficientnetb2Classification.model = ROOT_DIR + "/efficientnetb2Classification/model/model.json"
 
